@@ -1,7 +1,7 @@
 import itertools
 
 class Contact:
-	def __init__(self, shortname, longname, phone, *args, **kwargs, is_favorite = False):
+	def __init__(self, shortname, longname, phone, *args, is_favorite = False, **kwargs):
 		self.shortname = shortname
 		self.longname = longname
 		self.phone = phone
@@ -50,7 +50,7 @@ class PhoneBook():
 if __name__ == '__main__':
 	mycontact01 = Contact('Ivan','Petrov','1230101')
 	mycontact02 = Contact('Sergey','Ivanov','1230202')
-	mycontact03 = Contact('Oleg','Smirnov','0000001', is_favorite = True, 'nothome','Kostroma',email='olegsmirnov@kostroma.ru')
+	mycontact03 = Contact('Oleg','Smirnov','0000001', 'nothome','Kostroma', is_favorite = False ,email='olegsmirnov@kostroma.ru')
 	#print(type(mycontact01))
 	#print('Name: ',mycontact01.shortname, ' ', mycontact01.longname,' ', mycontact01.phone)
 	mycontactbook = PhoneBook('mybook')
